@@ -40,10 +40,7 @@ class ViewController: UIViewController {
         view.addSubview(btn)
         
         
-        
-        
-        let aSwiftClass:SimpleSwiftClass = SimpleSwiftClass();
-        showClassRuntime(object_getClass(aSwiftClass));
+        showClassRuntime(SimpleSwiftClass.self);
         showClassRuntime(object_getClass(self));
         
         methodSwizze(cls:object_getClass(self), systemSel: #selector(viewDidAppear(_:)), swizzeSel: #selector(myViewDidAppear(_:)))
